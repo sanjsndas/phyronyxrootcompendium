@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Phyronyx Root Compendium | Cookies & Earthly Traces</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #2c1a0c;  /* deep root brown */
+            font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+            color: #f7efdf;
+            line-height: 1.55;
+        }
+
+        :root {
+            --soil-dark: #2c1a0c;
+            --bark: #4a2a14;
+            --clay: #7a4a2a;
+            --sienna-light: #b87c4f;
+            --cream: #f7efdf;
+            --moss: #6b8c42;
+            --highlight: #e6c394;
+        }
+
+        .wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #3e2a1f;
+            box-shadow: 0 0 35px rgba(0,0,0,0.4);
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c1a0c 0%, #5a3a22 100%);
+            padding: 2rem 2rem 1.5rem;
+            border-bottom: 8px solid #b87c4f;
+            text-align: center;
+        }
+
+        .title-main {
+            font-size: 3.2rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-shadow: 4px 4px 0px #1f1208;
+            color: #ffe6c7;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #e6c394;
+            margin-top: 0.6rem;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: #5a3a22;
+            padding: 0.9rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            border-bottom: 1px solid #b87c4f;
+        }
+
+        nav a {
+            color: #f7efdf;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        nav a:hover {
+            border-bottom-color: #e6c394;
+            color: #ffecb3;
+        }
+
+        .container {
+            padding: 2rem 2.5rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            border-left: 8px solid #b87c4f;
+            padding-left: 1.2rem;
+            margin: 0 0 1.2rem 0;
+            color: #ffe2b5;
+        }
+
+        .policy-card {
+            background: #4f321d;
+            border-radius: 32px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid #b87c4f;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+        }
+
+        .policy-subtitle {
+            font-size: 1.8rem;
+            color: #e6c394;
+            border-bottom: 2px solid #b87c4f;
+            display: inline-block;
+            margin: 1.2rem 0 1rem 0;
+            padding-bottom: 6px;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: #3e2a1f;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+
+        .cookie-table th, .cookie-table td {
+            border: 1px solid #b87c4f;
+            padding: 0.9rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .cookie-table th {
+            background: #2c1a0c;
+            color: #e6c394;
+            font-weight: bold;
+        }
+
+        .consent-banner {
+            background: #2c1a0c;
+            border-left: 6px solid #6b8c42;
+            padding: 1.2rem;
+            margin: 1.8rem 0;
+            border-radius: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-consent {
+            background: #b87c4f;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #2c1a0c;
+        }
+
+        .btn-consent:hover {
+            background: #e6c394;
+            transform: scale(1.02);
+        }
+
+        .btn-settings {
+            background: #6b8c42;
+            color: #2c1a0c;
+        }
+
+        footer {
+            background: #2c1a0c;
+            padding: 2rem 2rem 1.5rem;
+            text-align: center;
+            border-top: 3px solid #b87c4f;
+            margin-top: 2rem;
+        }
+
+        .footer-contact {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        hr {
+            border-color: #7a4a2a;
+            margin: 1rem 0;
+        }
+
+        .wordcount-note {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                padding: 1.2rem;
+            }
+            .title-main {
+                font-size: 2.2rem;
+            }
+            .cookie-table th, .cookie-table td {
+                padding: 0.5rem;
+            }
+        }
+        .highlight-quote {
+            font-style: italic;
+            background: #5a3a22;
+            padding: 1rem;
+            border-radius: 28px;
+            margin: 1.2rem 0;
+            color: #f7efdf;
+            border-left: 4px solid #e6c394;
+        }
+        .manage-link {
+            color: #e6c394;
+            text-decoration: underline dotted;
+            cursor: pointer;
+        }
+        .toast-msg {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #6b8c42;
+            color: #2c1a0c;
+            padding: 0.7rem 1.8rem;
+            border-radius: 60px;
+            font-weight: bold;
+            z-index: 1000;
+            box-shadow: 0 4px 12px black;
+            font-family: monospace;
+            transition: 0.2s;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <div class="title-main">🌿 PHYRONYX ROOT COMPENDIUM 🌱</div>
+        <div class="tagline">"Where the wisdom of roots meets the art of earthkeeping"</div>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms Of Privacy</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="cookies.html">Cookies Policy</a>
+    </nav>
+    <div class="container">
+        <div class="section-title">🍪 COOKIES & EARTHLY TRACES</div>
+        <p>Just as mycelium leaves invisible threads beneath the forest floor, our digital grove uses small data tokens — called cookies — to enrich your journey through the Root Compendium. These humble fragments help remember your preferences, understand how root-readers wander through our pages, and ensure the soil (your experience) remains fertile. This policy explains what cookies we plant, why we tend them, and how you can manage your own harvest.</p>
+        
+        <!-- Main cookie policy content block -->
+        <div class="policy-card">
+            <div class="info-heading" style="font-size: 1.9rem; color:#e6c394; margin-bottom: 0.8rem;">🌾 Our cookie philosophy</div>
+            <p>We believe in transparency akin to clear forest light. Cookies placed on your device by phyronyxcompendium.org are used solely to improve site functionality, analyze anonymous usage patterns, and provide a smooth, earthy experience. We never sell your data or use tracking for exploitative purposes. Our approach mirrors regenerative agriculture: we take only what’s needed and give back through meaningful content.</p>
+            
+            <div class="policy-subtitle">📜 Types of cookies we tend</div>
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie family</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Essential (Strictly Necessary)</strong><br>🍞 "LoamKeepers"</td>
+                        <td>These root-level cookies are required for core site features: security, form functionality, and remembering your cookie consent choice. Without them, the compendium would be like a garden without soil.</td>
+                        <td>Session to persistent (max 12 months)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Performance & Analytics</strong><br>📊 "HumusMetrics"</td>
+                        <td>We use lightweight analytics (like self-hosted counters and aggregated data) to understand which articles about mycorrhiza, permaculture or seed-saving resonate most. All data is anonymized — we never track individual root-diggers.</td>
+                        <td>Up to 24 months (rolling)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Functional Preferences</strong><br>🎨 "ShadeTolerance"</td>
+                        <td>Remember your preferred text size, dark/light mode choices (if implemented), or last visited sections, making future visits more comfortable. Like a favorite sitting log in the orchard.</td>
+                        <td>6 months</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Third-party & Social</strong><br>🌻 "PollinatorLinks"</td>
+                        <td>Occasionally we embed videos from our Vimeo garden journal or offer social sharing buttons (Mastodon, Instagram). Those services may set their own cookies, which we cannot control but are limited to minimize intrusion.</td>
+                        <td>Varies by external provider</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="policy-subtitle">🌱 Your consent & root autonomy</div>
+            <p>When you first visit the Phyronyx Root Compendium, a small banner invites you to accept or customize your cookie preferences. You are the steward of your own digital soil. You may withdraw consent at any time by adjusting your browser settings or by clicking the “🍪 Revoke cookie choices” link at the bottom of this page. Please note: disabling essential cookies may affect certain functionalities — just as tilling too deep can disturb beneficial fungi.</p>
+            
+            <!-- interactive consent simulator (ethical, local storage demo) -->
+            <div id="consentSimulator" class="consent-banner">
+                <div style="flex: 3;">
+                    <strong>🌿 Manage your cookie preferences (demo interface)</strong><br>
+                    <span style="font-size: 0.9rem;">Adjust which categories you allow. Your preferences will be stored locally, mirroring real-world consent practices. This interactive panel reflects how we honour your choices.</span>
+                </div>
+                <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                    <button id="acceptAllBtn" class="btn-consent">🍪 Accept all earthly cookies</button>
+                    <button id="declineNonEssentialBtn" class="btn-consent btn-settings">🌾 Decline non-essential</button>
+                    <button id="customizeBtn" class="btn-consent btn-settings">⚙️ Customize</button>
+                </div>
+            </div>
+            
+            <div id="customizePanel" style="display: none; background: #2c1a0c; padding: 1.2rem; border-radius: 32px; margin: 1rem 0;">
+                <h4 style="color:#e6c394;">🍂 Select cookie families you wish to allow:</h4>
+                <label style="display: block; margin: 10px 0;"><input type="checkbox" id="essentialCat" checked disabled> Essential (always active — necessary for site)</label>
+                <label style="display: block; margin: 10px 0;"><input type="checkbox" id="analyticsCat" checked> Performance & Analytics (helps us improve)</label>
+                <label style="display: block; margin: 10px 0;"><input type="checkbox" id="functionalCat" checked> Functional Preferences (remember your settings)</label>
+                <label style="display: block; margin: 10px 0;"><input type="checkbox" id="thirdpartyCat"> Third-party / Social media cookies</label>
+                <button id="saveCustomPrefs" class="btn-consent" style="margin-top: 10px;">💾 Save preferences</button>
+                <button id="closeCustomPanel" class="btn-consent btn-settings" style="margin-top: 10px; margin-left: 10px;">Close</button>
+            </div>
+            
+            <div class="highlight-quote">
+                🌼 <strong>Third-party roots:</strong> Our digital grove may contain embedded content (e.g., garden walkthrough videos, external podcast episodes). Those platforms (like Vimeo, Spotify) may set their own cookies. We encourage you to review their policies, but rest assured we only include such content when it deepens your connection to earthcraft.
+            </div>
+            
+            <div class="policy-subtitle">🔧 Managing cookies via browser</div>
+            <p>Most web browsers allow you to control cookies through their settings. To delete or block cookies from Phyronyx Root Compendium, consult your browser’s help section. For example, in Chrome you may navigate to Settings → Privacy and Security → Cookies and other site data. In Safari, use Preferences → Privacy. Every browser offers a unique path, much like different soil profiles. We recommend keeping essential cookies enabled to enjoy features like contact forms and session stability.</p>
+            
+            <div class="policy-subtitle">📅 Updates to this cookie notice</div>
+            <p>Our root keepers review this policy seasonally — at least once per growing cycle (year). If significant changes occur, we will notify you via a banner or prominent notice on the homepage. The date below indicates the last time this policy was amended. We encourage you to revisit this page occasionally, as your trust is the bedrock of our community.</p>
+            <p><em>Last reviewed: 15th of Newleaf, 2025 (March 15, 2025)</em></p>
+            
+            <div style="margin-top: 1.8rem; border-top: 1px solid #b87c4f; padding-top: 1.2rem;">
+                <p><strong>📍 Contact our Data Steward (the Compost Warden):</strong><br>
+                For any questions regarding cookies or digital privacy, you may send a spore-message to privacy@phyronyxcompendium.org or write to: Phyronyx Root Compendium — Attn: Data Steward, 1427 Evergreen Lane, Hearthshire, VT 05032. We’ll respond with the same patience we give to brewing compost tea.</p>
+            </div>
+        </div>
+        
+        <!-- Additional interactive + lore: Extended garden of digital transparency -->
+        <div style="margin: 1.5rem 0 1rem;">
+            <div style="font-size: 1.7rem; color:#e6c394; border-left: 6px solid #b87c4f; padding-left: 1rem;">🌻 Why we honor cookie transparency</div>
+            <p>Just as a forest depends on clear cycles of decomposition and regrowth, the health of the web relies on transparency between sites and visitors. The Phyronyx Root Compendium was born from the idea that digital spaces can embody ecological principles: mutual respect, minimal waste, and regeneration of trust. Our cookie practices reflect that: we gather only what is useful, anonymize analytics to protect your privacy, and never engage in invasive ad tracking. We think of every byte as a seed — planted with intention. By reading this policy, you become part of a movement that values digital ethics as much as soil ethics. Thank you for being a mindful visitor of our rootstead.</p>
+            
+            <div style="background: #4f321d; border-radius: 28px; padding: 1.2rem; margin: 1.5rem 0;">
+                <span style="font-weight: bold;">🍪 Quick cookie FAQ (Rootlets' queries):</span><br>
+                ❓ <strong>Do you use Google Analytics?</strong> — We use a privacy-first, cookieless analytics tool called "Plausible" (self-hosted variant) that doesn’t track individuals. No persistent identifiers.<br>
+                ❓ <strong>Can I still use the site if I disable all cookies?</strong> — Core reading experience remains, but interactive features like contact forms might be limited. Essential cookies are minimal.<br>
+                ❓ <strong>Do cookies collect personal data like my name or address?</strong> — Never. Cookies store random identifiers or preferences, never personally identifiable information unless you submit forms (and then data is handled per privacy policy).<br>
+                ❓ <strong>How long do cookies remain on my device?</strong> — It depends on the type, but we set maximum expiration up to 12 months for essential preferences, after which they wither like autumn leaves — automatically removed.
+            </div>
+        </div>
+        
+        <div class="manage-link" id="revokeConsentLink" style="text-align: center; margin: 1rem 0; display: inline-block; cursor: pointer; background: #3e2a1f; padding: 0.5rem 1.2rem; border-radius: 60px;">🍂 Revoke / reset my cookie choices</div>
+        
+    </div>
+    
+    <footer>
+        <div class="footer-contact">
+            📍 <strong>Phyronyx Root Compendium</strong> — 1427 Evergreen Lane, Hearthshire, VT 05032<br>
+            📞 <strong>+1 (802) 555-ROOT (7668)</strong>  |  🌿 contact@phyronyxcompendium.org
+        </div>
+        <hr>
+        <div>© 2025 Phyronyx Root Compendium — Cultivating Earth Wisdom. All rights reserved. Rooted in soil stewardship & brown aesthetics.</div>
+        <div class="wordcount-note">🍪 Cookie policy crafted with transparency & mycelial ethics — part of the 78k+ word compendium ecosystem. 🍪</div>
+    </footer>
+</div>
+
+<script>
+    (function() {
+        // Cookie preferences manager using localStorage (simulate consent management)
+        const STORAGE_KEY = 'phyronyx_cookie_prefs';
+        // Default categories: essential always true, others true by default (implied consent on first load)
+        let currentPrefs = {
+            essential: true,   // always active & locked
+            analytics: true,
+            functional: true,
+            thirdparty: false   // default third-party off out of privacy
+        };
+        
+        // Load saved preferences if any
+        function loadPrefs() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if(saved) {
+                try {
+                    const parsed = JSON.parse(saved);
+                    currentPrefs = { ...currentPrefs, ...parsed };
+                    // ensure essential is always true
+                    currentPrefs.essential = true;
+                } catch(e) { console.warn("invalid prefs"); }
+            }
+            updateUIBasedOnPrefs();
+        }
+        
+        function savePrefsToStorage() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({
+                analytics: currentPrefs.analytics,
+                functional: currentPrefs.functional,
+                thirdparty: currentPrefs.thirdparty,
+                essential: true
+            }));
+            showToast('🌱 Cookie preferences saved. Your choices will be respected across pages.');
+        }
+        
+        function updateUIBasedOnPrefs() {
+            // sync checkboxes in customize panel if present
+            const analyticsChk = document.getElementById('analyticsCat');
+            const functionalChk = document.getElementById('functionalCat');
+            const thirdpartyChk = document.getElementById('thirdpartyCat');
+            if(analyticsChk) analyticsChk.checked = currentPrefs.analytics;
+            if(functionalChk) functionalChk.checked = currentPrefs.functional;
+            if(thirdpartyChk) thirdpartyChk.checked = currentPrefs.thirdparty;
+        }
+        
+        function showToast(msg, duration = 3500) {
+            let existingToast = document.querySelector('.toast-msg');
+            if(existingToast) existingToast.remove();
+            let toast = document.createElement('div');
+            toast.className = 'toast-msg';
+            toast.innerText = msg;
+            document.body.appendChild(toast);
+            setTimeout(() => { if(toast) toast.remove(); }, duration);
+        }
+        
+        // Accept all (non-essential set to true)
+        function acceptAll() {
+            currentPrefs.analytics = true;
+            currentPrefs.functional = true;
+            currentPrefs.thirdparty = true;
+            savePrefsToStorage();
+            updateUIBasedOnPrefs();
+            showToast('🍪 All earthly cookies accepted! Your journey is now enhanced with full functionality.');
+        }
+        
+        // Decline non-essential: only essential remains active
+        function declineNonEssential() {
+            currentPrefs.analytics = false;
+            currentPrefs.functional = false;
+            currentPrefs.thirdparty = false;
+            savePrefsToStorage();
+            updateUIBasedOnPrefs();
+            showToast('🌾 Non-essential cookies disabled. Only necessary root cookies remain.');
+        }
+        
+        // show/hide custom panel
+        const customizePanel = document.getElementById('customizePanel');
+        function openCustomize() {
+            if(customizePanel) customizePanel.style.display = 'block';
+        }
+        function closeCustomize() {
+            if(customizePanel) customizePanel.style.display = 'none';
+        }
+        
+        // save custom from checkboxes
+        function saveCustom() {
+            const analyticsChk = document.getElementById('analyticsCat');
+            const functionalChk = document.getElementById('functionalCat');
+            const thirdpartyChk = document.getElementById('thirdpartyCat');
+            if(analyticsChk) currentPrefs.analytics = analyticsChk.checked;
+            if(functionalChk) currentPrefs.functional = functionalChk.checked;
+            if(thirdpartyChk) currentPrefs.thirdparty = thirdpartyChk.checked;
+            savePrefsToStorage();
+            closeCustomize();
+            showToast('⚙️ Custom preferences applied. Thank you for tending your digital soil.');
+        }
+        
+        function resetConsent() {
+            // remove stored preferences -> revert to default: analytics & functional true, thirdparty false
+            localStorage.removeItem(STORAGE_KEY);
+            currentPrefs = {
+                essential: true,
+                analytics: true,
+                functional: true,
+                thirdparty: false
+            };
+            savePrefsToStorage();
+            updateUIBasedOnPrefs();
+            showToast('🍂 Cookie preferences have been reset to default (analytics + functional on, third-party off).');
+            closeCustomize();
+        }
+        
+        // event binding after DOM ready
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPrefs();
+            
+            const acceptBtn = document.getElementById('acceptAllBtn');
+            const declineBtn = document.getElementById('declineNonEssentialBtn');
+            const customizeBtn = document.getElementById('customizeBtn');
+            const saveCustomBtn = document.getElementById('saveCustomPrefs');
+            const closeCustomPanelBtn = document.getElementById('closeCustomPanel');
+            const revokeLink = document.getElementById('revokeConsentLink');
+            
+            if(acceptBtn) acceptBtn.addEventListener('click', acceptAll);
+            if(declineBtn) declineBtn.addEventListener('click', declineNonEssential);
+            if(customizeBtn) customizeBtn.addEventListener('click', openCustomize);
+            if(saveCustomBtn) saveCustomBtn.addEventListener('click', saveCustom);
+            if(closeCustomPanelBtn) closeCustomPanelBtn.addEventListener('click', closeCustomize);
+            if(revokeLink) revokeLink.addEventListener('click', resetConsent);
+            
+            // also handle custom panel close on outside click maybe optional? but fine.
+            // Ensure that the essential category remains disabled and visually locked
+            const essentialCat = document.getElementById('essentialCat');
+            if(essentialCat) {
+                essentialCat.disabled = true;
+                essentialCat.checked = true;
+            }
+        });
+    })();
+</script>
+</body>
+</html>
